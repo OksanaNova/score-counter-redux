@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, incrementByAmount } from "./redux/counter";
+import { increment, decrement, incrementByAmount, decrementByAmount, multiplyByAmount, divideByAmount } from "./redux/counter";
 
 
 function App() {
@@ -17,6 +17,14 @@ function App() {
       <button onClick={() => dispatch(decrement())}>-</button>
 
       <button onClick={() => dispatch(incrementByAmount(5))} >+ 5</button>
+
+      <button onClick={() => dispatch(decrementByAmount(5))}>- 5</button>
+
+      <button onClick={() => dispatch(multiplyByAmount(5))}>* 5</button>
+
+      <button onClick={() => dispatch(divideByAmount(5))}>/ 5</button>
+
+
     </div>
   )
 }
